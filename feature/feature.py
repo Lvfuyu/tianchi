@@ -26,13 +26,12 @@ def calculate(pdata, psample, pres):
 	for sample_line in sample_lines:
 		sale_date = sample_line[0]
 		sample_line = sample_line[1:]
-		#feature = [sale_date[-2:]]
 		feature = []
 		for k in range(len(sample_line)-1):
 			key = sample_line[k]
 			i = 1
 			l = []
-			while i<6: # i<6
+			while i<6:
 				month = int(sale_date[-2:])
 				if month <= i:
 					month += 12 - i
