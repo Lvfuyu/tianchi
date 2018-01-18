@@ -10,7 +10,8 @@ for line1, line2 in zip(pred_sample, pred_val):
     tmp = class2quant.get(class_id, 0)
     tmp += sale_quant
     class2quant[class_id] = tmp
-for (class_id, sale_quant) in class2quant.items():
+class2quant = sorted(class2quant.items(), key = lambda x:x[0])
+for (class_id, sale_quant) in class2quant:
     pred_submit.write('201711,' + class_id + ',' + str(sale_quant) + '\n')
 pred_val.close()
 pred_sample.close()
