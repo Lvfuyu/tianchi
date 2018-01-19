@@ -1,6 +1,24 @@
 样本字段说明
 train_sample.csv
-sale_date, class_id, brand_id, compartment, type_id, level_id, department_id, tr, gearbox_type, displacement, if_charging, price_level, driven_type_id, fuel_type_id, newenergy_type_id, emission_standards_id, if_MPV_id, if_luxurious_id, sale_quantity
+sale_date,
+class_id,
+brand_id,
+compartment,
+type_id,
+level_id,
+department_id,
+tr,
+gearbox_type,
+displacement,
+if_charging,
+price_level,
+driven_type_id,
+fuel_type_id,
+newenergy_type_id,
+emission_standards_id,
+if_MPV_id,
+if_luxurious_id,
+sale_quantity
 第一维sale_date是销售日期
 最后一维sale_quantity是预测目标销量
 除这两维外，对于每条样本的其他所有字段，统计对应的取值在前[1，3，5]个月内销量的五维统计量[max,min,avg,std,mid] （[1，3，5, ...]滑动窗口法，写成循环，便于扩展）
